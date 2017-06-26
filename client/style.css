@@ -1,0 +1,105 @@
+ .navbar{
+  font-family:"Arabic Typesetting", serif;
+  /*font-family:"B-Nazanin";*/
+  font-size:16pt;
+}
+
+.brand{
+	/*width:30%;*/
+	/*padding-top:3px;*/
+	/*padding-bottom:50px;*/
+	/*border:5px solid blue;*/ 
+    /*padding-right: -400px;*/
+    /*margin-top: :130px;*/
+}
+.navbar-brand > img {
+      max-height: 350%;
+      height: 350%;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+
+.marginTop{
+	padding-top:90px;
+}
+
+/*.test{
+	max-width: 1000px;
+	border:5px solid blue;
+}*/
+
+/*.meteor-blog-aspect-ratio-placeholder{
+	max-width:350px;
+	max-height:350px;
+}*/
+
+/*.meteor-blog-post-thumbnail{
+		width: 500%;
+		height: 500%;
+		max-width: 500%;
+}*/
+/*.meteor-blog-regular-image{
+	max-width:400px;
+	max-height:400px;
+}*/
+
+
+/*.meteor-blog-post-thumbnail.img{
+	width: 150px;
+	height: 120px;
+}
+*/
+
+
+
+.thumbnail{
+  height: 570px;
+  max-height:570px;
+  /*border-color: #B0C4DE;*/
+  border-style: solid;
+  border-width: 5px;
+}
+.thumbnail:hover{
+
+  border-color: #0000FF;
+  border-style: solid;
+  border-width: 5px;
+}
+.excerpt{
+
+  max-height: 120px;
+  height: 120px;
+  overflow : hidden;
+  /*white-space : wrap;*/
+}
+.thumbnail-img{
+  max-height: 300px;
+  /*max-height: 400px;*/
+  height: 300px;
+  /*width: 200px;*/
+}
+/*.thumbnail{
+  max-height: 650px;
+  height: 650px;
+}*/
+.layout{
+  /*font-family:"Arabic Typesetting", serif;*/
+  /*font-family:"B-Nazanin";*/
+  /*font-size:16pt;*/
+}
+
+/*.commentable-section{
+  direction: rtl;
+  unicode-bidi: isolate;
+}*/
+.rtl{
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+.ltr{
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+#myAudio {
+    background-color: red;
+}

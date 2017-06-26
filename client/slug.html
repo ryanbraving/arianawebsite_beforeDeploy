@@ -1,0 +1,129 @@
+<template name="slug">
+
+
+  <div class="container">
+
+  	<!-- <div>
+    {{> blogShow}}
+    </div> -->
+
+
+
+<!-- 	{{#with post}}
+	<div>
+	
+	<div class="meteor-blog-single">
+		<div class="meteor-blog-featured-image meteor-blog-regular-image">
+	    	<div class="meteor-blog-aspect-ratio-placeholder" style="width: 1600px; height: 900px;">
+	      		<img src={{featuredImage}} alt="" class="img-responsive center-block">
+	      
+	    	</div>
+	  	</div>
+		<div class="meteor-blog-post">
+		    <div class="meteor-blog-post-main">
+		    	<h1 class="meteor-blog-post-title text-center">
+		    		{{title}}
+		    	</h1>
+		    	<div class="meteor-blog-post-meta text-center">
+		    		<small>
+		    			<a href="#" data-action="edit-post">Edit</a>
+		    		</small>
+		    		<div id="commentable-area">
+		    			<p dir="rtl" class="commentable-section">
+		    			{{sort body}}
+		    			</p>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+    
+    </div>
+    {{/with}} -->
+    
+
+
+
+
+
+
+{{#with post}}
+	<div>
+		<div class="meteor-blog-single">
+    
+      
+			<div class="meteor-blog-featured-image meteor-blog-regular-image">
+			    <div class="meteor-blog-aspect-ratio-placeholder">
+			      <img src={{featuredImage}} alt="" class="img-responsive center-block">
+			      
+			    </div>
+		  	</div>
+        	<div class="meteor-blog-post">
+    			<div class="meteor-blog-post-main">
+      				{{#if english _id}}
+			        	<h1 class="meteor-blog-post-title text-center" dir="ltr">
+			          		{{title}}
+			        	</h1>
+			        {{else}}
+			        	<h1 class="meteor-blog-post-title text-center" dir="rtl">
+			          		{{title}}
+			        	</h1>
+			        {{/if}}
+
+			        <div class="meteor-blog-post-meta text-center">
+			          
+			             <small><a href="#" data-action="edit-post">Edit</a></small>
+			             --
+			          
+			          	By ryan@test.com on Jun 12th, 2017
+			          
+			    		<div class="meteor-blog-post-tags">
+			      			<p> – Tags: <a href="/blog/tag/english">english</a></p>
+			    		</div>
+			  
+			        </div>	<!-- div class="meteor-blog-post-meta -->
+      				
+      				{{#if english _id}}
+	     				<div id="commentable-area" dir="ltr">
+	     					{{{body}}}
+	     				</div>
+     				{{else}}
+	     				<div id="commentable-area" dir="rtl">
+	     					{{{body}}}
+	     				</div>
+     				{{/if}}
+     				
+    			</div>	<!-- <div class="meteor-blog-post-main"> -->
+	    		<div class="meteor-blog-back-link pull-left">
+	      			<a href="/blog"><i class="fa fa-caret-left"></i>Back to the Blog</a>
+	    		</div>
+    			<div class="share-buttons">
+					<a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=http%3A%2F%2Flocalhost%3A3000%2Fblog%2Ftime-money&amp;p[title]=Time%20%26%20Money&amp;p[summary]=Everything%20in%20Universe%20is%20interconnected%20and%20is%20made%20up%20of%20energy.%20It%E2%80%99s%20out%20of%20the%20scope%20of%20this%20post%20to%20explore%20it%20further%2C%20so%20I%E2%80%99m%20treating%20it%20as%20a%20fact%20here%20(in%20the%20footnote%20I%20have%20put%20some%20references%20%5B1-4%5D%2C%20in%20case%20you%20are%20interested%20to%20do%20some%20self-exploration).%20Both%20Science%20and%20spirituality%20are%20saying%20that%20in%20Reality%2C%20we%20are%20like%20waves%20in%20a%20sea%20of%20energy%20and%20our%20energy%20state%20affect%20every%20aspect%20of%20our%20lives.%20In%20the%20other%20words%2C%20our%20material%20life%20is%20a%203D%20projection%20of%20our%20energy%20state.%20%20I%20don%E2%80%99t%20only%20believe%20in%20this%20as%20a%20scientific%20or%20spiritual%20fact%2C%20but%20I%20have%20personally%20experienced%20it%20many%20times.%20However%2C%20still%20it%E2%80%99s%20damn%20hard%20to%20be%20responsible%20for%20my%20energy%20state%20all%20the%20time.%20I%20mean%20common%E2%80%A6%20being%20in%20this%20challenging%20world%2C%20imprisoned%20in%20a%20human%20body%2C%20having%20an%20amygdala%20to%20spin%20lack%20and%20attack%20signals%20constantly%2C%20plus%20a%20monkey%20mind%20generating%20ruthless%20thoughts%20non-stop%E2%80%A6%20seriously%2C%20what%20do%20you%20expect%3F%20%20These%20are%20the%20facts%20of%20our%20material%20beingness.%20In%20this%20planet%2C%20nothing%20is%20EASY.%20Forget%20about%20easy!&amp;p[images][0]=http%3A%2F%2Flocalhost%3A3000%2Fcfs%2Ffiles%2Fblog_images%2FDFFgRCHAA4tN4Aaop%2Ftime-and-money.jpg%3Ftoken%3DeyJhdXRoVG9rZW4iOiJEYWhDWnZiYmN1eXF4bUljTHJGMUg3STBtMVdyRDVLbnlVZTUtSUNzNGlKIn0%253D" target="_blank" class="large btn shareit-facebook-colors fb-share"><i class="fa fa-facebook"></i> Share on Facebook</a>
+      
+    				<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A3000%2Fblog%2Ftime-money&amp;text=Time%20%26%20Money&amp;via=ryan%40test.com" class="large btn shareit-twitter-colors tw-share"><i class="fa fa-twitter"></i> Share on Twitter</a>
+  				</div>  <!-- share-buttons -->
+    
+  			</div>	<!-- <div class="meteor-blog-post"> -->
+      
+    
+  		</div> <!-- <div class="meteor-blog-single"> -->
+    </div>
+{{/with}}
+
+
+
+  </div> <!-- container -->
+</template>
+
+<template name="slug2">
+
+
+  <div class="container">
+
+  	<div>
+    {{> blogShow}}
+    </div>
+
+  </div> <!-- container -->
+</template>
+

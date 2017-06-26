@@ -1,0 +1,61 @@
+<template name="podcasts">
+  <div class="container">
+
+  	<div class="row">
+  		<div class="col-sm-6 col-md-4">
+  		<style scoped>
+  			.thumbnail{
+  				width: 335px;
+  				height: 200px;
+  				max-height:200px;
+  				/*border-color: #B0C4DE;*/
+  				border-style: solid;
+  				border-width: 5px;
+			}
+  		</style>
+    		<div class="thumbnail">
+      			<!-- <img src="..." alt="..."> -->
+      			
+      			<div class="caption">
+        			<h3>Title</h3>
+        			<audio id="myAudio" controls controlsList="nodownload">
+  						<source src="apple1.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+        			<p>...</p>
+        			<p><a href="#" class="btn btn-primary" role="button">Get on Telegram</a> <a href="#" class="btn btn-default" role="button">Bookmark</a></p>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+  		
+  </div>
+</template>
+
+
+
+
+
+<template name="podcasts2">
+  <div class="container">
+
+  <div>
+      This is an example of a static podcasts page. You can put lots of static content
+  </div>
+  <div>
+  	<audio id="myAudio" controls controlsList="nodownload">
+  		<source src="apple1.mp3" type="audio/mpeg">
+  		<!-- <source src="apple1.ogg" type="audio/ogg"> -->
+		Your browser does not support the audio element.
+	</audio>
+  </div>
+  <div>
+  	<audio controls>
+  		<source src="horse.ogg" type="audio/ogg">
+  		<source src="apple1.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+  </div>
+    
+  </div> <!-- container -->
+</template>

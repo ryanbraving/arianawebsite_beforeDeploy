@@ -1,0 +1,39 @@
+<template name="blog">
+<div class="container-fluid">
+  <h1>Welcome to my Blog</h1>
+  <div class="row">
+  <ul>
+    {{#if blogReady}}
+      {{#each posts}}
+        
+          <div class="col-md-4 col-xl-3">
+            <div class="thumbnail">
+              <img src={{featuredImage}} alt="..." class="thumbnail-img">
+              <div class="caption">
+              {{#if english _id}}
+                <h3><a href="/blog/{{slug}}">{{title}}</a></h3>
+                <p class="excerpt">{{excerpt}}</p>
+              {{else}}
+                <h3><a href="/blog/{{slug}}"><p dir="rtl">{{title}}</p></a></h3>
+                <p class="excerpt" dir="rtl">{{excerpt}}</p>
+              {{/if}}
+                <p><a href="/blog/{{slug}}" class="btn btn-primary" role="button">READ MORE</a></p>
+                <p>
+                <!-- {{mehdi}} -->
+                </p>
+              </div>
+            </div>
+          </div>
+      
+      {{else}}
+        <li>No posts found.</li>
+      {{/each}}
+    {{else}}
+      <li>Loading...</li>
+    {{/if}}
+  </ul>
+    </div>
+  </div> <!-- container -->
+</template>
+
+

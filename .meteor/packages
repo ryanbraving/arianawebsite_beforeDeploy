@@ -27,3 +27,4 @@ shell-server@0.2.3
 stylus@2.513.9
 ian:accounts-ui-bootstrap-3
 dynamic-import
+benjick:telegram-bot

@@ -1,5 +1,4 @@
-// import 'mediaelement/full';
-
+Meteor.subscribe("sounds");
 // $(document).ready(function(){
 //     $('[data-toggle="tooltip"]').tooltip();   
 // });
@@ -89,6 +88,51 @@ Template.header.events({
 
 })
 
+Template.podcasts.events({
+	"click .js-sendtotelegram": function(event){
+		console.log(this);
+		Meteor.call("insertMessage");
+		// Session.set("docid", this._id);
+	}, // js-load-doc event
+
+	"click .js-show-fileinput":function(event){
+		$("#myModal").modal("show");
+
+	},
+
+	// "click .js-add-doc": function(event){
+	// 	event.preventDefault();
+	// 	console.log("Add a new doc!");
+	// 	if (!Meteor.user()){ // no logged in user
+	// 		alert("You need to log in first!");
+	// 	}
+	// 	else{ // they have logged in
+	// 		var id = Meteor.call("addDoc", function(err, res){
+	// 			if(!err){
+	// 				console.log("2- event callback received id: "+res);
+	// 				Session.set("docid", res);
+	// 			}
+	// 		});
+	// 		console.log("3- event got and id back: "+id);
+	// 	}
+	// }, // js-add-doc event
+}); // Temp
+
+
+Template.podcasts.helpers({
+	isAdminUser: function() {
+		// return false;
+		if(Meteor.user() && Meteor.user().roles != undefined){
+			if(Meteor.user().roles[0] == "blogAdmin"){
+				console.log("It is Admin");
+				return true;
+			} //if
+			console.log("It is Not Admin");
+			return false;
+		}// if		
+    }, // isAdminUser helper
+}); //helper
+
 Template.header.helpers({
 	blog: function(){
 		var language = $("#languageSelector").text();
@@ -101,6 +145,20 @@ Template.header.helpers({
 		// }
 	},
 });
+
+Template.podcasts.helpers({
+	sounds: function(){
+		return Sounds.find({});
+		// if (Session.get("userFilter")){ //they set a filter
+			// return Images.find({createdBy:Session.get("userFilter")},{sort:{createdOn:-1, rating:-1}});
+		// }//if
+		// else{
+		// 	return Images.find({},{sort:{createdOn:-1, rating:-1}, limit:Session.get("imageLimit")});
+		// }//else
+		
+	}, //helper
+});
+
 Template.slug.helpers({
 	// blog: function(){
 	// 	return "hiiiiiiiiiiiiiiiiiiiiiii";
@@ -186,6 +244,40 @@ Template.blog.helpers({
 });//helpers function
 
 
+Template.sound_add_form.events({
+	// "click .js-add-image":function(event){
+	"submit .js-add-sound":function(event){
+		console.log("hiiiiiiiiiiiiiiiiiiiiiiii");
+		var snd_src, img_alt;
+		snd_src = event.target.snd_src.value;
+		snd_title = event.target.snd_title.value;
+		// img_src = $("#img_src").val();
+		// img_alt = $("#img_alt").val();
+		console.log(snd_src);
+		console.log(snd_title);
+				// return false;
+
+		if (Meteor.user()){
+			Sounds.insert({
+				snd_src:snd_src,
+				title:snd_title,
+				createdOn: new Date(),
+				createdBy: Meteor.user()._id
+			}); //Image.insert
+		}// if
+		// console.log(Meteor.User());
+		$("#exampleModal").modal("hide");
+		return false;
+
+	},
+
+	// "click .js-show-image-form":function(event){
+	// 	$("#exampleModal").modal("show");		
+	// 	return false;
+	// },
+});
+
+
 function pageLoadingLanguage(language){
 	console.log(language);
 	if (language == "فارسی"){
@@ -205,3 +297,28 @@ function pageLoadingLanguage(language){
 	$("#languageSelector").click();
 } // function
 
+$(function() {
+$(document).on('change', ':file', function() {
+	console.log($(this));
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+    console.log(input);
+  });
+
+$(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+});

@@ -1,13 +1,18 @@
 <template name="podcasts">
   <div class="container">
-
+  <div>
+    {{#if isAdminUser}}
+      {{> sound_add_form}}
+    {{/if}}
+  </div>
   	<div class="row">
+    {{#each sounds}}
   		<div class="col-sm-6 col-md-4">
   		<style scoped>
   			.thumbnail{
   				width: 335px;
-  				height: 200px;
-  				max-height:200px;
+  				height: 180px;
+  				max-height:180px;
   				/*border-color: #B0C4DE;*/
   				border-style: solid;
   				border-width: 5px;
@@ -17,16 +22,18 @@
       			<!-- <img src="..." alt="..."> -->
       			
       			<div class="caption">
-        			<h3>Title</h3>
-        			<audio id="myAudio" controls controlsList="nodownload">
-  						<source src="apple1.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
+        			<h3>{{title}}</h3>
+        			 <audio id="myAudio" controls controlsList="nodownload">
+  						    <source src="https://dl.dropboxusercontent.com/s/cbiz1kgu5b9uigv/apple1.mp3?dl=0" type="audio/mpeg">
+                  <source src="https://dl.dropboxusercontent.com/s/cbiz1kgu5b9uigv/apple1.mp3?dl=0" type="audio/ogg">
+						      Your browser does not support the audio element.
+					       </audio>
         			<p>...</p>
-        			<p><a href="#" class="btn btn-primary" role="button">Get on Telegram</a> <a href="#" class="btn btn-default" role="button">Bookmark</a></p>
+        			<p><a href="#" class="btn btn-primary btn-xs js-sendtotelegram" role="button">Get on Telegram</a> <a href="#" class="btn btn-default btn-xs" role="button">Bookmark</a></p>
       			</div>
     		</div>
   		</div>
+    {{/each}}
 	</div>
   		
   </div>
@@ -59,3 +66,4 @@
     
   </div> <!-- container -->
 </template>
+

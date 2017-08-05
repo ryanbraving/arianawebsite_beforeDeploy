@@ -1,10 +1,110 @@
- .navbar{
+ .navbar6{
   font-family:"Arabic Typesetting", serif;
   /*font-family:"B-Nazanin";*/
   font-size:16pt;
 }
 
-.brand{
+
+/*.navbar-custom {
+  background-color:#af0303;
+    color:#ffffff;
+    border-radius:0;
+}
+  
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+  background-color:transparent;
+}
+      
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #ffffff;
+}
+     
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#33aa33;
+}
+*/
+
+.navbar-default{
+  background-color:#af0303;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-default .navbar-brand {
+    color:#eeeeee;
+}
+
+.navbar-default .navbar-nav .dropdown-toggle {
+    color:#eeeeee;
+}
+
+/*.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #ffffff;
+}*/
+
+
+
+
+
+
+
+.divide-nav{
+  height: 50px;
+  background-color: #428bca;
+}
+
+.divide-text{
+    color:#fff;
+    line-height: 20px;
+    font-size:20px;
+    padding: 15px 0;
+}
+
+.affix {
+  top: 50px;
+  width:100%;
+}
+
+.filler{
+  min-height: 0px;
+}
+
+.navbar-form {
+   padding-left: 0;
+}
+
+.navbar-collapse{
+   padding-left:0; 
+}
+
+
+
+
+
+
+
+.brand6{
 	/*width:30%;*/
 	/*padding-top:3px;*/
 	/*padding-bottom:50px;*/
@@ -19,10 +119,51 @@
       object-fit: contain;
     }
 
-.marginTop{
+.marginTop1{
 	padding-top:90px;
 }
 
+.parallax1 {
+    /* The image used */
+    background-image: url("https://static.pexels.com/photos/487867/pexels-photo-487867.jpeg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("https://static.pexels.com/photos/40815/youth-active-jump-happy-40815.jpeg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax11 {
+    /* The image used */
+    background-image: url("apple.jpeg");
+
+    /* Set a specific height */
+    min-height: 1000px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /*.test{
 	max-width: 1000px;
 	border:5px solid blue;
@@ -102,4 +243,12 @@
 }
 #myAudio {
     background-color: red;
+}
+
+.showBackgroundImage { 
+  background: url('https://static.pexels.com/photos/267151/pexels-photo-267151.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }

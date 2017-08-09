@@ -5,7 +5,7 @@
 }
 
 
-/*.navbar-custom {
+.navbar-custom {
   background-color:#af0303;
     color:#ffffff;
     border-radius:0;
@@ -21,12 +21,12 @@
 }
       
 .navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus,
-.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > li > a:focus 
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus,
 .navbar-custom .navbar-nav > .open >a {
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: white;
 }
      
 .navbar-custom .navbar-brand {
@@ -38,20 +38,62 @@
 .navbar-custom .icon-bar {
     background-color:#33aa33;
 }
-*/
+
 
 .navbar-default{
   background-color:#af0303;
-    color:#ffffff;
-    border-radius:0;
+    /*color:#ffffff;*/
+    /*border-radius:0;*/
+/*    height:70px;
+    padding-top: 8px;
+    font-size: 16px;
+    font-weight: bold;*/
+
 }
+
+
+.navbar-default .navbar-nav > li > a:not(.language):hover,
+.navbar-default .navbar-nav > li > a:not(.language):focus,
+/*.navbar-default .navbar-nav > .active > a:not(.language):hover,*/
+/*.navbar-default .navbar-nav > .active > a:not(.language):focus,*/
+.navbar-default .navbar-nav > .open >a {
+
+    text-decoration: none;
+    background-color: white;
+    /*background-color: green;*/
+    color:black;
+}
+/*.active{
+  text-decoration: none;
+  background-color:white;
+  color:black;
+}
+*/
+/*.navbar-default .navbar-nav > .active > a {
+    color: #ffffff;
+  background-color:transparent;
+}*/
 
 .navbar-default .navbar-brand {
     color:#eeeeee;
 }
 
-.navbar-default .navbar-nav .dropdown-toggle {
-    color:#eeeeee;
+/*.navbar-default .navbar-nav .language{
+  color:yellow;
+  background-color:#af0303;
+}*/
+.navbar-default .navbar-nav a.language,
+.navbar-default .navbar-nav a.language:hover,
+.navbar-default .navbar-nav a.language:focus {
+/*.navbar-default .navbar-nav .language > .active > a:hover,
+.navbar-default .navbar-nav .language > .active > a:focus {*/
+    text-decoration: none;
+    color:white;
+    background-color:#af0303;
+}
+
+.navbar-default .navbar-nav > li> a:not(.language) {
+    color:white;
 }
 
 /*.navbar-default .navbar-nav > li > a:hover,

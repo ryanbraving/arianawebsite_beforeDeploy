@@ -5,8 +5,8 @@
 
 
 
-<template name="header1">
-  <nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation">
+<template name="header3">
+  <nav class="navbar navbar-default1 navbar-custom navbar-fixed-top" role="navigation">
     <div class="container navContainer">
     <!-- <div class="container-fluid"> -->
 
@@ -121,10 +121,11 @@
 <template name="header">
   
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
+  <!-- <div class="container-fluid"> -->
    <ul class="nav navbar-nav">
     <li>
-      <a id="languageSelector" href="#" class="js-language-selector" data-toggle="tooltip" data-placement="bottom" title="Change to Farsi">فارسی</a>
+      <a id="languageSelector" href="#" class="js-language-selector language" data-toggle="tooltip" data-placement="bottom" title="Change to Farsi">فارسی</a>
+     <!-- <a id="languageSelector1" href="#" class="js-language-selector1 language">فارسی</a> -->
             <!-- <a href="news">English</a> -->
     </li>
    </ul>
@@ -134,7 +135,28 @@
       <a class="navbar-brand" href="/">Ariana Braving</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id="couching" href="/couching">Couching</a>
+        </li>
+        <li>
+          <a id="podcasts" href="/podcasts">Podcasts</a>
+        </li>
+        <li>
+          <!-- <a id="blog" href="{{blogPathFor "blogIndex"}}">Blog</a> -->
+          <a id="blog" href="/blog/tag/english">Blog</a>
+        </li>
+        <!-- <li>
+          <a href="{{blogPathFor "blogAdmin"}}">Admin Area (must login)</a>
+        </li> -->
+
+      <!-- </ul> -->
+        <li class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav">
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -160,12 +182,12 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
     </div>
     </div>
-  </div><!-- /.container-fluid -->
+  <!-- </div>/.container-fluid -->
 </nav>
-<div class="divide-nav">
+<!-- <div class="divide-nav">
   <div class="container">
     <p class="divide-text">Some Text Here</p>
   </div>
@@ -186,7 +208,7 @@
   <div class="row">
     <div class="filler"></div>
   </div>
-</div>
+</div> -->
 </template>
 
 

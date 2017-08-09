@@ -6,6 +6,12 @@ Meteor.subscribe("sounds");
 
 Template.header.rendered = function() {
    $('#languageSelector').tooltip(); //initialize all tooltips in this template
+   // $("li").click(function(){
+            // remove the class i.e. selectednav from all li
+      // $('.nav li').removeClass("active");
+            // apply selectednav class to the current item
+	  // $(this).addClass("active");
+    // });
    // $("#languageSelector").text("English");
    // $("#languageSelector").text("فارسی");
    // var language = $("#languageSelector").text();

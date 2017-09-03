@@ -305,3 +305,28 @@
   -o-background-size: cover;
   background-size: cover; 
 }
+
+.home-templ > img {
+  position: absolute;
+  top: 40px;
+  /*left: 25px;*/
+}
+
+.home-templ .book-pen {
+  z-index: 2;
+  top: 40px;
+  left: 500px;
+}
+.home-templ .ariana {
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+  top: 150px;
+  left: 20px;
+  z-index: 3;
+}
+.home-templ .rose {
+  z-index: 1;
+  top:40px;
+  /*left: 50px;*/
+}

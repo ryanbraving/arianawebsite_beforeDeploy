@@ -1,0 +1,45 @@
+
+<template name="subscribe_form">
+  <div class="modal fade" id="myModalSubscribe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Subscribtion Form:</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="js-add-image">
+            <div class="form-group">
+              <label for="img_src" class="form-control-label">Name:</label>
+              <input type="text" class="form-control" id="img_src"/>
+            </div>
+            <div class="form-group">
+              <label for="img_alt" class="form-control-label">Email:</label>
+              <input type="text" class="form-control" id="img_alt"/>
+              <!-- <textarea class="form-control" id="message-text"></textarea> -->
+            </div>
+            <div class="form-group">
+              <label for="img_alt" class="form-control-label">Country:</label>
+              <input type="text" class="form-control" id="img_alt"/>
+              <!-- <textarea class="form-control" id="message-text"></textarea> -->
+            </div>
+            <div class="form-group">
+              <label for="img_alt" class="form-control-label">City:</label>
+              <input type="text" class="form-control" id="img_alt"/>
+              <!-- <textarea class="form-control" id="message-text"></textarea> -->
+            </div>
+            <button class="btn btn-primary">Save</button>
+            <!-- <button type="button" class="btn btn-primary">Save</button> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary js-add-image">Save</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

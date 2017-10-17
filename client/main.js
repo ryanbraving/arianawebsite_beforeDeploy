@@ -92,7 +92,47 @@ Template.header.events({
 		}
 	},
 
-})
+});
+
+Template.home.events({
+	// "submit .js-add-sound":function(event){
+	"submit .js-ryan": function(event){
+		event.preventDefault();
+		// var snd_src, img_alt;
+		// snd_src = event.target.snd_src.value;
+		// snd_title = event.target.snd_title.value;
+		console.log("test");
+
+		var name = event.target.inputName.value;
+		var email = event.target.inputEmail.value;
+		// return false;
+		Meteor.call('sendEmail',{
+    		to: email,
+    		from: 'no-reply@BravingAcademy.com',
+    		subject: 'Welcome to Braving Academy!',
+    		text: 'Mailgun is totally awesome for sending emails!',
+    		// html: 'With meteor it&apos;s easy to set up <strong>HTML</strong> <span style="color:red">emails</span> too.'
+    		html: 'Thanks <strong>' + name + '</strong>. Someone from <strong>Braving Academy</strong> will contact you soon.'
+  		});
+	}, // js-load-doc event
+
+
+	"click .js-show-modal-subscribe":function(event){
+		$("#myModalSubscribe").modal("show");
+	},
+
+
+
+});
+
+Template.sound_add_form_btn.events({
+"click .js-show-fileinput":function(event){
+		$("#exampleModal").modal("show");
+
+	},
+
+}); // Temp
+
 
 Template.podcasts.events({
 	"click .js-sendtotelegram": function(event){
@@ -101,10 +141,10 @@ Template.podcasts.events({
 		// Session.set("docid", this._id);
 	}, // js-load-doc event
 
-	"click .js-show-fileinput":function(event){
-		$("#myModal").modal("show");
+	// "click .js-show-fileinput":function(event){
+	// 	$("#myModal").modal("show");
 
-	},
+	// },
 
 	// "click .js-add-doc": function(event){
 	// 	event.preventDefault();
@@ -137,6 +177,16 @@ Template.podcasts.helpers({
 			return false;
 		}// if		
     }, // isAdminUser helper
+    sounds: function(){
+		return Sounds.find({});
+		// if (Session.get("userFilter")){ //they set a filter
+			// return Images.find({createdBy:Session.get("userFilter")},{sort:{createdOn:-1, rating:-1}});
+		// }//if
+		// else{
+		// 	return Images.find({},{sort:{createdOn:-1, rating:-1}, limit:Session.get("imageLimit")});
+		// }//else
+		
+	}, //helper
 }); //helper
 
 Template.header.helpers({
@@ -152,9 +202,9 @@ Template.header.helpers({
 	},
 });
 
-Template.podcasts.helpers({
-	sounds: function(){
-		return Sounds.find({});
+// Template.podcasts.helpers({
+// 	sounds: function(){
+// 		return Sounds.find({});
 		// if (Session.get("userFilter")){ //they set a filter
 			// return Images.find({createdBy:Session.get("userFilter")},{sort:{createdOn:-1, rating:-1}});
 		// }//if
@@ -162,8 +212,8 @@ Template.podcasts.helpers({
 		// 	return Images.find({},{sort:{createdOn:-1, rating:-1}, limit:Session.get("imageLimit")});
 		// }//else
 		
-	}, //helper
-});
+// 	}, //helper
+// });
 
 Template.slug.helpers({
 	// blog: function(){

@@ -126,8 +126,67 @@ Template.home.events({
 });
 
 Template.sound_add_form_btn.events({
-"click .js-show-fileinput":function(event){
-		$("#exampleModal").modal("show");
+	"click .js-show-fileinput":function(event){
+
+		// bootbox.alert({
+		//     message: "This is an alert with a callback!",
+		//     callback: function () {
+		//         console.log('This was logged in the callback!');
+		//     },
+		//     size: 'large',
+		//     backdrop: true,
+		//     // className: 'bb-alternate-modal'
+		// });
+
+		// bootbox.confirm({
+		//     title: "Destroy planet?",
+		//     message: "Do you want to activate the Deathstar now? This cannot be undone.",
+		//     buttons: {
+		//         cancel: {
+		//             label: '<i class="fa fa-times"></i> Cancel'
+		//         },
+		//         confirm: {
+		//             label: '<i class="fa fa-check"></i> Confirm'
+		//         }
+		//     },
+		//     callback: function (result) {
+		//         console.log('This was logged in the callback: ' + result);
+		//     },
+		//     backdrop: true,
+		// });
+
+		bootbox.dialog({ message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i> Loading...</div>' });
+
+
+		// var dialog = bootbox.dialog({
+		// title: 'A custom dialog with buttons and callbacks',
+		// message: "<p>This dialog has buttons. Each button has it's own callback function.</p>",
+		// buttons: {
+		//     cancel: {
+		//         label: "I'm a custom cancel button!",
+		//         className: 'btn-danger',
+		//         callback: function(){
+		//             console.log('Custom cancel clicked');
+		//         }
+		//     },
+		//     noclose: {
+		//         label: "I'm a custom button, but I don't close the modal!",
+		//         className: 'btn-warning',
+		//         callback: function(){
+		//             console.log('Custom button clicked');
+		//             return false;
+		//         }
+		//     },
+		//     ok: {
+		//         label: "I'm a custom OK button!",
+		//         className: 'btn-info',
+		//         callback: function(){
+		//             console.log('Custom OK clicked');
+		//         }
+		//     }
+		// },
+		// size: 'large',
+		// });
 
 	},
 
@@ -300,38 +359,38 @@ Template.blog.helpers({
 });//helpers function
 
 
-Template.sound_add_form.events({
-	// "click .js-add-image":function(event){
-	"submit .js-add-sound":function(event){
-		console.log("hiiiiiiiiiiiiiiiiiiiiiiii");
-		var snd_src, img_alt;
-		snd_src = event.target.snd_src.value;
-		snd_title = event.target.snd_title.value;
-		// img_src = $("#img_src").val();
-		// img_alt = $("#img_alt").val();
-		console.log(snd_src);
-		console.log(snd_title);
-				// return false;
+// Template.sound_add_form.events({
+// 	// "click .js-add-image":function(event){
+// 	"submit .js-add-sound":function(event){
+// 		console.log("hiiiiiiiiiiiiiiiiiiiiiiii");
+// 		var snd_src, img_alt;
+// 		snd_src = event.target.snd_src.value;
+// 		snd_title = event.target.snd_title.value;
+// 		// img_src = $("#img_src").val();
+// 		// img_alt = $("#img_alt").val();
+// 		console.log(snd_src);
+// 		console.log(snd_title);
+// 				// return false;
 
-		if (Meteor.user()){
-			Sounds.insert({
-				snd_src:snd_src,
-				title:snd_title,
-				createdOn: new Date(),
-				createdBy: Meteor.user()._id
-			}); //Image.insert
-		}// if
-		// console.log(Meteor.User());
-		$("#exampleModal").modal("hide");
-		return false;
+// 		if (Meteor.user()){
+// 			Sounds.insert({
+// 				snd_src:snd_src,
+// 				title:snd_title,
+// 				createdOn: new Date(),
+// 				createdBy: Meteor.user()._id
+// 			}); //Image.insert
+// 		}// if
+// 		// console.log(Meteor.User());
+// 		$("#exampleModal").modal("hide");
+// 		return false;
 
-	},
+// 	},
 
-	// "click .js-show-image-form":function(event){
-	// 	$("#exampleModal").modal("show");		
-	// 	return false;
-	// },
-});
+// 	// "click .js-show-image-form":function(event){
+// 	// 	$("#exampleModal").modal("show");		
+// 	// 	return false;
+// 	// },
+// });
 
 
 function pageLoadingLanguage(language){

@@ -13,9 +13,14 @@ Router.route('blog', function () {
    // pageLoadingLanguage(language);
    
 });
+
+Router.route('/subscribe', function () {
+  this.render('subscribe');
+});
 Router.route('/podcasts', function () {
   this.render('podcasts');
 });
+
 // Router.route('/blog/:slug', function () {
 //   this.render('slug', {
 //   	data: function(){
